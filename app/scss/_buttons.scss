@@ -1,4 +1,6 @@
-.btn{
+.btn {
+  display: flex;
+  width: fit-content;
   padding: 8px 20px;
   background-color: transparent;
   cursor: pointer;
@@ -8,34 +10,43 @@
   font-size: 12px;
   line-height: 20px;
   text-transform: uppercase;
-  transition:  linear .2s;
-  &:hover{
+  transition: linear .2s;
+  letter-spacing: 0;
+  
+
+  &:hover {
     background-color: #FFD600;
     border-color: #FFD600;
     color: #000;
   }
-  &--header{
+
+  &--header {
     border-color: #FFD600;
     color: #FFD600;
-    &:hover{
+
+    &:hover {
       color: #000;
       background-color: #FFD600;
     }
   }
-  &--yellow{
+
+  &--yellow {
     border-color: #FFD600;
     background-color: #FFD600;
     color: #000;
-    &:hover{
+
+    &:hover {
       background-color: #fff;
       color: #000;
       border-color: #fff;
     }
   }
-  &--black{
+
+  &--black {
     background-color: #000;
     color: #fff;
-    &:hover{
+
+    &:hover {
       background-color: #FFD600;
       color: #000;
       border-color: #FFD600;
