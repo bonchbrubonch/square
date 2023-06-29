@@ -1,0 +1,44 @@
+.btn{
+  padding: 8px 20px;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #000;
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+  transition:  linear .2s;
+  &:hover{
+    background-color: #FFD600;
+    border-color: #FFD600;
+    color: #000;
+  }
+  &--header{
+    border-color: #FFD600;
+    color: #FFD600;
+    &:hover{
+      color: #000;
+      background-color: #FFD600;
+    }
+  }
+  &--yellow{
+    border-color: #FFD600;
+    background-color: #FFD600;
+    color: #000;
+    &:hover{
+      background-color: #fff;
+      color: #000;
+      border-color: #fff;
+    }
+  }
+  &--black{
+    background-color: #000;
+    color: #fff;
+    &:hover{
+      background-color: #FFD600;
+      color: #000;
+      border-color: #FFD600;
+    }
+  }
+}
