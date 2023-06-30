@@ -23,6 +23,7 @@ $(function () {
   $(".header__menu-btn").on("click", function () {
     $(".header__menu-btn").toggleClass("active");
     $(".header__menu-wrapper").toggleClass("open");
+    $(".header").toggleClass("dark");
     $("body").toggleClass("lock");
   });
 

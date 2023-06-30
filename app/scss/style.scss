@@ -12,7 +12,7 @@
   height: 75px;
   background-color: transparent;
   color: #fff;
-
+  transition:  linear .2s;
   &__inner {
     display: flex;
     align-items: center;
@@ -164,8 +164,11 @@
     background-color: #000;
     color: #fff;
   }
+  
 }
-
+.header.sticky.dark{
+  background-color: #FFD600;
+}
 .intro.margin-top {
   margin: 0;
 }
@@ -699,7 +702,7 @@
     max-width: 507px;
     width: 100%;
     color: #000;
-
+    border-radius: 5px;
     p {
       margin: 0 0 27px 0;
       max-width: 340px;
