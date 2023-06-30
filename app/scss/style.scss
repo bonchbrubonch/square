@@ -6,9 +6,11 @@
 
 /*start header============*/
 .header {
+  position: relative;
+  z-index: 10;
   padding: 16px 0;
   height: 75px;
-  background-color: #000;
+  background-color: transparent;
   color: #fff;
 
   &__inner {
@@ -20,7 +22,8 @@
     width: 229px;
     height: 41px;
 
-    img {
+    img,
+    svg {
       width: 100%;
       height: 100%;
       object-fit: contain;
@@ -34,12 +37,15 @@
     align-items: center;
     justify-content: space-between;
   }
-  &__menu{
+
+  &__menu {
     margin: 0 15px 0 0;
   }
-  &__menu-btn{
+
+  &__menu-btn {
     display: none;
   }
+
   &__list {
     display: flex;
 
@@ -103,11 +109,69 @@
 
 }
 
+.header.sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  background-color: #FFD600;
+  z-index: 999;
+
+  li {
+    color: #000;
+
+    a:hover {
+      color: #000;
+    }
+  }
+
+  .header__list li a::before {
+    background-color: #000;
+  }
+
+  .header__logo svg path,
+  .header__logo svg polygon {
+    fill: #000;
+  }
+
+  .btn--header {
+    border-color: #000;
+    color: #000;
+  }
+
+  .header__box {
+    color: #fff;
+  }
+
+  .header__btn-en,
+  .header__btn-ua {
+    color: #fff;
+  }
+  .header__btn-en.active,
+  .header__btn-ua.active {
+    color: #000;
+  }
+  .header__menu-btn{
+    
+    &::after,
+    &::before,
+    span{
+      background-color: #000;
+    }
+  }
+}
+
+.intro.margin-top {
+  margin: 0;
+}
+
 /*end header============*/
 
 /*start intro================*/
 .intro {
-  padding: 156px 0 234px;
+  margin: -75px 0 0 0;
+  padding: 231px 0 234px;
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
@@ -354,7 +418,9 @@
   li+li {
     margin: 0 0 0 21%;
   }
-
+  &__box-num{
+    display: flex;
+  }
   li {
     span {
       display: block;
@@ -678,7 +744,8 @@
     width: 167px;
     height: 40px;
 
-    img {
+    img,
+    svg {
       width: 100%;
       height: 100%;
       object-fit: contain;

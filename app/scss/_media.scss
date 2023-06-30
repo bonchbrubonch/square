@@ -101,6 +101,7 @@
     right: 0;
     bottom: 0;
     left: 0;
+    height: 92vh;
     background-color: #000;
     z-index: 9999;
     display: flex;
@@ -111,6 +112,27 @@
     transform: translateX(-100%);
     transition: transform .3s;
     overflow: auto;
+  }
+
+  .header.sticky .header__menu-wrapper.open {
+    li {
+      color: #fff;
+    }
+
+    .btn--header {
+      border-color: #FFD600;
+      color: #FFD600;
+    }
+
+    .header__btn-en,
+    .header__btn-ua{
+      color: #fff;
+    }
+
+    .header__btn-en.active,
+    .header__btn-ua.active {
+      color: #FFD600;
+    }
   }
 
   .header__menu-wrapper.open {
@@ -198,6 +220,8 @@
   }
 
   .info__img {
+    top: 80px;
+    position: sticky;
     margin: 0 24px 0 0;
     border-radius: 5px;
     max-width: 300px;
@@ -217,7 +241,7 @@
   }
 
   .news__box {
-    margin: 0 170px 35px 0;
+    margin: 0 0 35px 0;
   }
 
   .news__img {
@@ -262,6 +286,10 @@
   .footer__join {
     margin: 5px 0 0 5%;
   }
+
+  .intro.margin-top {
+    margin: -15px 0 0 0;
+  }
 }
 
 @media (max-width: 800px) {
@@ -279,9 +307,11 @@
 
   .contacts__left {
     margin: 0 0 30px 0;
-    max-width: 550px;
+    max-width: 100%;
   }
-
+  .contacts__right{
+    max-width: 100%;
+  }
   .contacts .title {
     margin: 0 0 40px 0;
   }
@@ -358,6 +388,7 @@
   }
 
   .info__img {
+    position: inherit;
     margin: 0 0 24px 0;
     border-radius: 5px;
     max-width: 550px;
@@ -374,8 +405,6 @@
 
     height: 250px;
   }
-
-  .info__box {}
 
   .info__box-img {
     height: 140px;
@@ -418,6 +447,7 @@
   .contacts-list--footer li {
     margin: 0 0 15px -15px;
   }
+
   .whatsapp {
     bottom: 40px;
     right: 3%;
