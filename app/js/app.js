@@ -15,16 +15,12 @@ $(function () {
 	});
 
 	$("nav").on("click", "a", function (event) {
-		// исключаем стандартную реакцию браузера
 		event.preventDefault();
 
-		// получем идентификатор блока из атрибута href
 		var id = $(this).attr('href'),
 
-			// находим высоту, на которой расположен блок
 			top = $(id).offset().top;
 
-		// анимируем переход к блоку, время: 800 мс
 		$('body,html').animate({
 			scrollTop: top
 		}, 800);
@@ -54,6 +50,12 @@ $(function () {
 		$(".header__menu-wrapper").toggleClass("open");
 		$(".header").toggleClass("dark");
 		$("body").toggleClass("lock");
+	});
+
+	$(".header__list li a").on("click", function () {
+		$(".header__menu-btn").removeClass("active");
+		$(".header__menu-wrapper").removeClass("open");
+		$("body").removeClass("lock");
 	});
 
 	var number = document.querySelector('.number'),
