@@ -291,6 +291,9 @@
   .intro.margin-top {
     margin: -15px 0 0 0;
   }
+  .header__menu-wrapper.open .header__list li a::before{
+    background-color: #FFD600;
+  }
 }
 
 @media (max-width: 800px) {
