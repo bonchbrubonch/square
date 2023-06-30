@@ -1,0 +1,90 @@
+.contacts-list {
+  margin: 0 0 0 -24px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  li {
+    position: relative;
+    padding: 0 0 0 45px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 28px 24px;
+    width: calc(50% - 24px);
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    span {
+      margin: 0 0 6px 0;
+      display: block;
+      color: #FFD600;
+      font-size: 18px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -13px;
+      left: 2px;
+      width: 47px;
+      height: 47px;
+      background-color: rgba(255, 255, 255, 0.10);
+      background-repeat: no-repeat;
+      background-size: 23px 23px;
+      background-position: center;
+    }
+  }
+
+  &__address {
+    &::before {
+      background-image: url("../images/dest/icons/mark.svg");
+    }
+  }
+
+  &__phone {
+    &::before {
+      background-image: url("../images/dest/icons/phone.svg");
+    }
+  }
+
+  &__email {
+    &::before {
+      background-image: url("../images/dest/icons/email.svg");
+    }
+  }
+
+  &__graphic {
+    &::before {
+      background-image: url("../images/dest/icons/clock.svg");
+    }
+  }
+
+  &--footer {
+    max-width: 535px;
+    margin: 0;
+    justify-content: space-between;
+    li::before {
+      background-color: transparent;
+      background-size: 12px 12px;
+    }
+
+    li {
+      margin: 0 0 15px 8%;
+      width: 50%;
+      max-width: 200px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 140%;
+    }
+    .contacts-list__email::before{
+      top: -17px;
+    }
+  }
+}

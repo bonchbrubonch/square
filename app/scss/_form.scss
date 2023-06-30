@@ -1,0 +1,55 @@
+.form {
+  &__input-wrap {
+    margin: 0 0 10px 0;
+    width: 100%;
+  }
+
+  input {
+    padding: 10px 10px 10px 0;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #000;
+    background-color: transparent;
+  }
+
+  .error {
+    span {
+      font-size: 10px;
+      line-height: 140%;
+      color: #FF0000;
+    }
+
+    input {
+      border-color: #FF0000;
+    }
+
+    input::placeholder {
+      color: #FF0000;
+    }
+  }
+
+  input::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 1px;
+    color: #000;
+  }
+
+  p {
+    max-width: 100% !important;
+    color: #BFBFBF;
+    font-size: 12px !important;
+    line-height: 140%;
+  }
+
+  &--modal {
+    input {
+      border-color: #FFD600;
+      &::placeholder {
+        color: #fff;
+      }
+    }
+  }
+}
